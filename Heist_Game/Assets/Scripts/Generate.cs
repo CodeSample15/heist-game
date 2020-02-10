@@ -13,6 +13,8 @@ public class Generate : MonoBehaviour
     public GameObject[] TreasureConnections;
     public GameObject[] RoomConnections;
     public GameObject[] HallwayConnections;
+    
+    public Transform start;
 
     private Random rand; //random variable for random generation
 
@@ -26,5 +28,6 @@ public class Generate : MonoBehaviour
     void Update()
     {
         //starting from start point: random generation begins
+        transform.position = new Vector3(start.position.x, start.position.y, start.position.z);
     }
 }
